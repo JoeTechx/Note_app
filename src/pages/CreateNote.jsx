@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { IoIosArrowBack } from "react-icons/io"
 import { Link } from "react-router-dom"
-import { }v4 as uuid 
+import { v4 as uuid } from "uuid"
 
 
 
@@ -12,7 +12,7 @@ const CreateNote = () => {
     const handleSubmit = (e) =>{
         e.preventDefault()
         if(title && details){
-            const note = {}
+            const note = {id: uuid(), title, details}
         }
     }
     return(
