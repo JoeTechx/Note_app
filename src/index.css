@@ -186,6 +186,9 @@ h2 {
 .create-note__form input {
     font-size: 2rem;
 }
+input, textarea{
+    resize: none;
+}
 
 
 /* MEDIA QUERIES FOR PHONES */
