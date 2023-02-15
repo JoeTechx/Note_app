@@ -34,7 +34,7 @@ const EditNote = ({notes, setNotes}) => {
 
 
     const handleDelete = () => {
-        const newNotes = notes.filter(item == item.id != id);
+        const newNotes = notes.filter(item => item.id != id);
 
         setNotes(newNotes);
         navigate("/")
