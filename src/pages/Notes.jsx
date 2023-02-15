@@ -2,7 +2,7 @@ import { CiSearch } from "react-icons/ci"
 import { BsPlusLg } from "react-icons/bs"
 import { Link } from "react-router-dom"
 import NoteItem from "../components/NoteItem"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const Notes = ({notes}) => {
   const [showSearch, setShowSearch] = useState(false);

@@ -3,7 +3,7 @@ import Notes from "./pages/Notes"
 import CreateNotes from "./pages/CreateNote"
 import EditNotes from "./pages/EditNote"
 // import dummyNotes from "./dummy_notes"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 
 const App = () => {

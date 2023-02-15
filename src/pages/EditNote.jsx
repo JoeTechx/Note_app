@@ -1,6 +1,10 @@
 import { IoIosArrowBack } from "react-icons/io"
 import { RiDeleteBin6Line } from "react-icons/ri"
 import { Link, useParams, useNavigate } from "react-router-dom"
+import { useState } from 'react'
+import useCreateDate from "../components/useCreateDate"
+
+
 const EditNote = ({notes, setNotes}) => {
     const {id} = useParams();
     const note = notes.find((item) => item.id == id)
