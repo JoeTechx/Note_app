@@ -15,7 +15,6 @@ const Notes = ({notes}) => {
       if(note.title.toLowerCase().match(text.toLowerCase())){
         return note;
       }
-      return;
     }))
   }
 
