@@ -29,7 +29,7 @@ const CreateNote = ({setNotes}) => {
                 <Link to="/" className="btn"><IoIosArrowBack/></Link>
                 <button className="btn lg primary" onClick={handleSubmit}>save</button>
             </header>
-            <form className="create-note__form" onsubmit={handleSubmit}>
+            <form className="create-note__form" onSubmit={handleSubmit}>
                 <input type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
                 <textarea rows="10" placeholder="Note details..." value={details} onChange={(e) => setDetails(e.target.value)}></textarea>
             </form>

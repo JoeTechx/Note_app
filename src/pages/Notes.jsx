@@ -18,14 +18,14 @@ const Notes = ({notes}) => {
     }))
   }
 
-  useEffect(handleSearch, [text, notes])
+  useEffect(handleSearch, [text])
 
     return(
        <section>
         <header className="notes__header">
            {!showSearch && <h2>My Note</h2>}
-            { showSearch && <input type='text' value={text} onchange={(e) => {setText(e.target.value);handleSearch();}} autofocus placeholder="Keyword..." /> }
-            <button className='btn' onclick={() => setShowSearch(prevState => !prevState)}><CiSearch/></button>
+            { showSearch && <input type='text' value={text} onChange={(e) => {setText(e.target.value);handleSearch();}} autoFocus placeholder="Keyword..." /> }
+            <button className='btn' onClick={() => setShowSearch(prevState => !prevState)}><CiSearch/></button>
         </header>
         <div className="notes__container">
          {
