@@ -15,10 +15,11 @@ const Notes = ({notes}) => {
       if(note.title.toLowerCase().match(text.toLowerCase())){
         return note;
       }
+      return;
     }))
   }
 
-  useEffect(handleSearch, [text])
+  useEffect(handleSearch, [text, notes])
 
     return(
        <section>

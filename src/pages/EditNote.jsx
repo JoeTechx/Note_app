@@ -7,7 +7,7 @@ import useCreateDate from "../components/useCreateDate"
 
 const EditNote = ({notes, setNotes}) => {
     const {id} = useParams();
-    const note = notes.find((item) => item.id == id)
+    const note = notes.find((item) => item.id === id)
     
     const [title, setTitle] = useState(note.title)
     const [details, setDetails] = useState(note.details)
@@ -21,7 +21,7 @@ const EditNote = ({notes, setNotes}) => {
             const newNote = {...note, title, details, date}
 
             const newNotes = notes.map(item => {
-                if(item.id == id){
+                if(item.id === id){
                     item = newNote;
                 }
                 return item;
@@ -34,7 +34,7 @@ const EditNote = ({notes, setNotes}) => {
 
 
     const handleDelete = () => {
-        const newNotes = notes.filter(item => item.id != id);
+        const newNotes = notes.filter(item => item.id !== id);
 
         setNotes(newNotes);
         navigate("/")
