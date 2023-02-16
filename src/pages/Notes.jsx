@@ -1,4 +1,5 @@
 import { CiSearch } from "react-icons/ci"
+import { MdClose } from "react-icons/md"
 import { BsPlusLg } from "react-icons/bs"
 import { Link } from "react-router-dom"
 import NoteItem from "../components/NoteItem"
@@ -25,9 +26,10 @@ const Notes = ({notes}) => {
         <header className="notes__header">
            {!showSearch && <h2>My Note</h2>}
             { showSearch && <input type='text' value={text} onChange={(e) => {setText(e.target.value);handleSearch();}} autoFocus placeholder="Keyword..." /> }
-            <button className='btn' onClick={() => setShowSearch(prevState => !prevState)}><CiSearch/></button>
+            <button className='btn' onClick={() => setShowSearch(prevState => !prevState)}>{showSearch ? <MdClose/> : <CiSearch/>}</button>
         </header>
         <div className="notes__container">
+          {filteredNotes.length == 0 && <p className="empty__notes">wetin you type? commot for here</p>}
          {
            filteredNotes.map(note => <NoteItem key={note.id} note= {note} />)
          }
