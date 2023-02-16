@@ -29,7 +29,7 @@ const Notes = ({notes}) => {
             <button className='btn' onClick={() => setShowSearch(prevState => !prevState)}>{showSearch ? <MdClose/> : <CiSearch/>}</button>
         </header>
         <div className="notes__container">
-          {filteredNotes.length == 0 && <p className="empty__notes">wetin you type? commot for here</p>}
+          {filteredNotes.length == 0 && <p className="empty__notes">Note Not Found?</p>}
          {
            filteredNotes.map(note => <NoteItem key={note.id} note= {note} />)
          }
